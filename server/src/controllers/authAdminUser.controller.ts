@@ -25,8 +25,14 @@ export const register = async (
       return;
     }
 
-    const { name, email, password, role } = req.body;
-    await authAdminUserService.register(name, email, password, role);
+    const { first_name, last_name, email, password, role } = req.body;
+    await authAdminUserService.register(
+      first_name,
+      last_name,
+      email,
+      password,
+      role
+    );
 
     response = commonResponseSetup("201", null, null);
     res.status(200).json(response);
@@ -164,7 +170,7 @@ export const requestForgetPasswordEmail = async (
   }
 };
 
-export const verifyForgetPasswordEmail = async (
+export const verifyChangePasswordEmail = async (
   req: Request,
   res: Response,
   next: NextFunction
@@ -181,7 +187,7 @@ export const verifyForgetPasswordEmail = async (
 
     const { email, otp, password } = req.body;
 
-    await authAdminUserService.verifyForgetPasswordEmail(email, otp, password);
+    await authAdminUserService.verifyChangePasswordEmail(email, otp, password);
     res.status(200).json(response);
   } catch (error: any) {
     next(error);

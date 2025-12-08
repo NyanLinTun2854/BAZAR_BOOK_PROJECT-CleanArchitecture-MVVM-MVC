@@ -2,7 +2,8 @@ import { JwtPayload } from "jsonwebtoken";
 import { Types } from "mongoose";
 
 export interface IAdmin {
-  name: string;
+  first_name: string;
+  last_name: string;
   email: string;
   role: string;
   email_verified: string;
@@ -11,7 +12,8 @@ export interface IAdmin {
 
 export interface IUserFromTokenDecode extends JwtPayload {
   _id: Types.ObjectId;
-  name: string;
+  first_name: string;
+  last_name: string;
   email: string;
 }
 

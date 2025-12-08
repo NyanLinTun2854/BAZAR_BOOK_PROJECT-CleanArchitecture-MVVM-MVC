@@ -116,4 +116,15 @@ dependencies {
     } else {
         implementation jscFlavor
     }
+
+    // configurations.all {
+    //     resolutionStrategy {
+    //         force 'androidx.core:core:1.16.0' // Ensure everything uses the latest core
+            
+    //         // Exclude the problematic Android Support Library module from all dependencies
+    //         exclude group: 'com.android.support', module: 'support-compat'
+    //         exclude group: 'com.android.support', module: 'support-core-utils'
+    //         exclude group: 'com.android.support', module: 'support-v4'
+    //     }
+    // }
 }

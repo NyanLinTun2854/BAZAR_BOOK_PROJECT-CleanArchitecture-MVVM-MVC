@@ -37,9 +37,9 @@ async function sendVerificationEmail(email: string, otp: string) {
 adminUserOTPSchema.pre("save", async function (next) {
   console.log("New document saved to the database");
 
-  if (this.isNew) {
-    await sendVerificationEmail(this.email, this.otp);
-  }
+  // if (this.isNew) {
+  await sendVerificationEmail(this.email, this.otp);
+  // }
   next();
 });
 

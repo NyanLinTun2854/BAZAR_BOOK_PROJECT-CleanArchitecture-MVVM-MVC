@@ -1,0 +1,13 @@
+{
+  "onboarding": {
+    "skip": "Saltar",
+    "continue": "Continuar",
+    "getStarted": "Empezar",
+    "signIn": "Iniciar Sesión",
+    "title1": "Ahora leer libros\nserá más fácil",
+    "subtitle1": "Descubre nuevos mundos, únete a una vibrante comunidad de lectura. Comienza tu aventura lectora sin esfuerzo con nosotros."
+  },
+  "common": {
+    "hello": "Hola Mundo"
+  }
+}

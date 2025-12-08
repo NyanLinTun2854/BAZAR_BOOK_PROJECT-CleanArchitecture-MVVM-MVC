@@ -22,7 +22,8 @@ import {
 } from "@models/adminUserOTP.model";
 
 export const register = async (
-  name: string,
+  first_name: string,
+  last_name: string,
   email: string,
   password: string,
   role: string
@@ -57,7 +58,8 @@ export const register = async (
   const hashed = await bcrypt.hash(password, CONSTANT.saltRounds);
 
   const newUser: IAdmin = {
-    name,
+    first_name,
+    last_name,
     email,
     password: hashed,
     role,
@@ -101,6 +103,7 @@ export const login = async (
 ): Promise<ILoginServiceResp> => {
   // Validate User
   const user = await getAdminUserByEmail(email);
+
   if (
     !user ||
     (user.password && !(await bcrypt.compare(password, user.password)))
@@ -132,7 +135,12 @@ export const login = async (
   }
 
   // Generate Tokens
-  const payload = { id: user._id, name: user.name, email: user.email };
+  const payload = {
+    id: user._id,
+    first_name: user.first_name,
+    last_name: user.last_name,
+    email: user.email,
+  };
   const accessToken = jwt.sign(payload, CONSTANT.JWT_ACCESS_SECRET as string, {
     expiresIn: "30m",
   });
@@ -198,7 +206,7 @@ export const requestForgetPasswordEmail = async (email: string) => {
   await createAdminUserOTP({ otp, email });
 };
 
-export const verifyForgetPasswordEmail = async (
+export const verifyChangePasswordEmail = async (
   email: string,
   otp: string,
   password: string

@@ -40,11 +40,17 @@ export const userTokenRefreshSchema = Joi.object({
 });
 
 export const adminUserRegisterSchema = Joi.object({
-  name: Joi.string().min(3).required().messages({
-    "string.base": `"name" should be a type of 'text'`,
-    "string.empty": `"name" cannot be empty field`,
-    "string.min": `"name" should have a minimum length of {#limit}`,
-    "any.required": `"name" is a required field`,
+  first_name: Joi.string().min(3).required().messages({
+    "string.base": `"first_name" should be a type of 'text'`,
+    "string.empty": `"first_name" cannot be empty field`,
+    "string.min": `"first_name" should have a minimum length of {#limit}`,
+    "any.required": `"first_name" is a required field`,
+  }),
+  last_name: Joi.string().min(3).required().messages({
+    "string.base": `"last_name" should be a type of 'text'`,
+    "string.empty": `"last_name" cannot be empty field`,
+    "string.min": `"last_name" should have a minimum length of {#limit}`,
+    "any.required": `"last_name" is a required field`,
   }),
   email: Joi.string().email().required().messages({
     "string.email": `"email" must be a valid email`,

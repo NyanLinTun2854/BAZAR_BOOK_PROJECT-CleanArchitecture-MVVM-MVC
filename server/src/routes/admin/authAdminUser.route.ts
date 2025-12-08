@@ -13,7 +13,7 @@ authAdminUserRouter
   .route("/request-forget-password-email")
   .post(authAdminUserController.requestForgetPasswordEmail);
 authAdminUserRouter
-  .route("/verify-forget-password-email")
-  .post(authAdminUserController.verifyForgetPasswordEmail);
+  .route("/verify-change-password-email")
+  .post(authAdminUserController.verifyChangePasswordEmail);
 
 export default authAdminUserRouter;

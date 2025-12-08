@@ -6,7 +6,13 @@ export interface IAdminDocument extends IAdmin, Document {}
 const adminUserSchema: Schema<IAdminDocument> =
   new mongoose.Schema<IAdminDocument>(
     {
-      name: {
+      first_name: {
+        type: String,
+        required: true,
+        trim: true,
+        minlength: 2,
+      },
+      last_name: {
         type: String,
         required: true,
         trim: true,

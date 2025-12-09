@@ -16,6 +16,7 @@ module.exports = {
           {rootPathPrefix: '@constants', rootPathSuffix: 'src/constants'},
           {rootPathPrefix: '@helpers', rootPathSuffix: 'src/helpers'},
           {rootPathPrefix: '@theme', rootPathSuffix: 'src/theme'},
+          {rootPathPrefix: '@i18n', rootPathSuffix: 'src/i18n'},
         ],
       },
     ],

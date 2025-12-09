@@ -1,3 +1,5 @@
+// tsconfig.json
+
 {
   "extends": "@react-native/typescript-config/tsconfig.json",
   "compilerOptions": {
@@ -12,9 +14,14 @@
       "@services/*": ["services/*"],
       "@store/*": ["store/*"],
       "@utils/*": ["utils/*"],
-      "@constants/*": ["constants/*"],
-      "@helpers/*": ["helpers/*"],
+      "@constants/*": ["utils/constants/*"], // Note: Adjusted based on your features structure
+      "@helpers/*": ["utils/helpers/*"], // Note: Adjusted based on your features structure
       "@theme/*": ["theme/*"]
     }
-  }
+  },
+  "include": [
+    // 💡 Add the files you want TypeScript to process.
+    // This ensures all your source code and declaration files are checked.
+    "src/**/*"
+  ]
 }

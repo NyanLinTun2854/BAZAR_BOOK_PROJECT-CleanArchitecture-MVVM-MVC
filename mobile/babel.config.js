@@ -17,6 +17,10 @@ module.exports = {
           {rootPathPrefix: '@helpers', rootPathSuffix: 'src/helpers'},
           {rootPathPrefix: '@theme', rootPathSuffix: 'src/theme'},
           {rootPathPrefix: '@i18n', rootPathSuffix: 'src/i18n'},
+          {
+            rootPathPrefix: '@lib',
+            rootPathSuffix: 'src/lib',
+          },
         ],
       },
     ],

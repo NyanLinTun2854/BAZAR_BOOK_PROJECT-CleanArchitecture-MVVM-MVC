@@ -4,7 +4,7 @@ import axios, {AxiosInstance, AxiosResponse} from 'axios';
 
 import store from '@store/index';
 import {RootState} from '@store/rootReducer';
-import {removeItem, SecureStorageKey} from './SecureStorage';
+import {removeItem, SecureStorageKey} from '@lib/data/authStorage';
 
 const BASE_URL = 'https://api.yourbookstore.com/v1';
 

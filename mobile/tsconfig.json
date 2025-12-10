@@ -17,7 +17,8 @@
       "@constants/*": ["utils/constants/*"], // Note: Adjusted based on your features structure
       "@helpers/*": ["utils/helpers/*"], // Note: Adjusted based on your features structure
       "@theme/*": ["theme/*"],
-      "@i18n/*": ["i18n/*"]
+      "@i18n/*": ["i18n/*"],
+      "@lib/*": ["lib/*"]
     }
   },
   "include": [

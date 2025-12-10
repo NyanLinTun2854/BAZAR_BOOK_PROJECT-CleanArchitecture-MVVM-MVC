@@ -133,7 +133,7 @@ const OnboardingScreen: React.FC = () => {
         <CustomButton
           title={t('onboarding.signIn')}
           variant="outline"
-          onPress={_ => handleSignIn('mm')}
+          onPress={_ => handleSignIn('en')}
           buttonStyle={styles.secondaryButtonContainer}
           textStyle={styles.secondaryButtonText}
         />

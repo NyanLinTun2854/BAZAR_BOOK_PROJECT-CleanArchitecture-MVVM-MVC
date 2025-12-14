@@ -45,7 +45,7 @@ const adminUserSchema: Schema<IAdminDocument> =
   );
 
 const AdminUser: Model<IAdminDocument> = mongoose.model<IAdminDocument>(
-  "adminUser",
+  "AdminUser",
   adminUserSchema
 );
 

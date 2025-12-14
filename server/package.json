@@ -5,8 +5,12 @@
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register src/server.ts",
     "build": "tsc",
-    "start": "node dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate:create": "npx migrate-mongo create",
+    "migrate:up": "npx migrate-mongo up",
+    "migrate:down": "npx migrate-mongo down",
+    "seed": "ts-node -r tsconfig-paths/register src/seeders/seed.ts"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +28,7 @@
     "helmet": "^8.1.0",
     "joi": "^17.13.3",
     "jsonwebtoken": "^9.0.2",
+    "migrate-mongo": "^14.0.7",
     "moment": "^2.30.1",
     "mongoose": "^8.16.4",
     "morgan": "^1.10.1",
@@ -31,6 +36,7 @@
     "otp-generator": "^4.0.1",
     "passport": "^0.7.0",
     "passport-jwt": "^4.0.1",
+    "slugify": "^1.6.6",
     "tsconfig-paths": "^4.2.0"
   },
   "devDependencies": {
@@ -41,6 +47,7 @@
     "@types/otp-generator": "^4.0.2",
     "@types/passport": "^1.0.17",
     "@types/passport-jwt": "^4.0.1",
+    "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.8.3"
   }

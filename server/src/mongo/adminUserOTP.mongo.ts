@@ -44,6 +44,6 @@ adminUserOTPSchema.pre("save", async function (next) {
 });
 
 const AdminUserOTP: Model<IAdminUserOTPDocument> =
-  mongoose.model<IAdminUserOTPDocument>("adminUserOTP", adminUserOTPSchema);
+  mongoose.model<IAdminUserOTPDocument>("AdminUserOTP", adminUserOTPSchema);
 
 export default AdminUserOTP;

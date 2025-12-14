@@ -35,6 +35,7 @@
       "@controllers/*": ["controllers/*"],
       "@services/*": ["services/*"],
       "@models/*": ["models/*"],
+      "@mongo/*": ["mongo/*"],
       "@middlewares/*": ["middlewares/*"],
       "@customTypes/*": ["types/*"],
       "@utils/*": ["utils/*"],

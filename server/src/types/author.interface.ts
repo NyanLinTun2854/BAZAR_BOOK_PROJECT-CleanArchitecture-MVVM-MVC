@@ -1,0 +1,5 @@
+export interface IAuthor {
+  name: string;
+  bio: string;
+  image_url: string;
+}
